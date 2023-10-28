@@ -1,6 +1,7 @@
 package chainOfResponsibility;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Pedido {
@@ -19,7 +20,7 @@ public class Pedido {
 	}
 
 	public List<ItemPedido> getItensPedido() {
-		return itensPedido;
+		return Collections.unmodifiableList(itensPedido);
 	}
 
 	public double getTotal() {
